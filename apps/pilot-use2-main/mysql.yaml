@@ -15,21 +15,6 @@ spec:
     helm:
       valueFiles:
         - values.yaml
-      parameters:
-        - name: pvc.enabled
-          value: "false"
-        - name: users_service_db_user
-          value: users_service
-        - name: users_service_db_pass
-          value: uLdaCwXV6wPis8Ww9FWxfA7H2EH43cqU
-        - name: users_service_db_name
-          value: users_service
-        - name: db_admin_user
-          value: db_admin
-        - name: db_admin_pass
-          value: qvJLyUNXhoQQ6YHBcDgMhhKq
-        - name: db_root_pass
-          value: TG7ujL74svsXUETr7VP2PNqeP79a
   project: pilot-use2-main
   syncPolicy:
     syncOptions:

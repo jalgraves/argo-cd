@@ -33,9 +33,9 @@ service:
   port: 3306
 
 resources: {}
-users_service_db_pass:
-users_service_db_name:
-users_service_db_user:
-db_admin_pass:
-db_admin_user:
-db_root_pass:
+users_service_db_pass: uLdaCwXV6wPis8Ww9FWxfA7H2EH43cqU
+users_service_db_name: users_service
+users_service_db_user: users_service
+db_admin_pass: qvJLyUNXhoQQ6YHBcDgMhhKq
+db_admin_user: db_admin
+db_root_pass: TG7ujL74svsXUETr7VP2PNqeP79a
