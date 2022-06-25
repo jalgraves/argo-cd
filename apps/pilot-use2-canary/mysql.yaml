@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: mysql
+  name: mysql-canary
   annotations:
     argocd.argoproj.io/manifest-generate-paths: /apps/helm/mysql
 spec:
