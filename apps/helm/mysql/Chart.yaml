@@ -3,4 +3,4 @@ name: mysql
 description: A Helm chart for deploying MySQL to K8s
 type: application
 version: 0.1.4
-appVersion: 5.7.38-debian
+appVersion: latest
