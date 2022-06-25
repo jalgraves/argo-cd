@@ -10,7 +10,7 @@ spec:
     server: https://10.8.21.35:6443
   source:
     path: apps/helm/mysql
-    repoURL: git@github.com:HqOapp/argo-cd.git
+    repoURL: git@github.com:jalgraves/argo-cd.git
     targetRevision: main
     helm:
       valueFiles:
