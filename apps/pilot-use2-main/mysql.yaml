@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mysql
+  annotations:
+    argocd.argoproj.io/manifest-generate-paths: /apps/helm/mysql
+spec:
+  destination:
+    namespace: database
+    server: https://k8s.pilot.use2.hqo.pub:6443
+  source:
+    path: apps/helm/mysql
+    repoURL: git@github.com:HqOapp/argo-cd.git
+    targetRevision: main
+    helm:
+      valueFiles:
+        - values.yaml
+  project: pilot-use2-main
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true

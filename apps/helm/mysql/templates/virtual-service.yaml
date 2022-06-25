@@ -1,0 +1,21 @@
+{{- if .Values.istio.enabled -}}
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: {{ include "mysql.fullname" . }}
+spec:
+  hosts:
+  - "{{ include "mysql.fullname" . }}.{{ .Release.Namespace }}.svc.cluster.local"
+  - "{{ include "mysql.fullname" . }}.{{ .Values.domain_name }}"
+
+  gateways:
+  - istio-ingress/web-gateway
+  - mesh # applies to all the sidecars in the mesh
+  http:
+  - route:
+    - destination:
+        port:
+          number: {{ .Values.service.port }}
+        host: "{{ include "mysql.fullname" . }}.{{ .Release.Namespace }}.svc.cluster.local"
+        subset: {{ include "mysql.fullname" . }}
+{{- end }}

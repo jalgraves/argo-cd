@@ -1,0 +1,9 @@
++-+-+-+-+ +-+-+-+ +-+-+-+-+-+-+ +-+-+-+-+
+|*|*|*|*| |H|Q|O| |D|E|V|O|P|S| |*|*|*|*|
++-+-+-+-+ +-+-+-+ +-+-+ +-+-+-+ +-+-+-+-+
+
+MySQL DB install complete
+
+To check pod status run:
+
+kubectl get pods -n {{ .Release.Namespace }}

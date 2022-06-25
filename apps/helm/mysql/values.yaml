@@ -1,0 +1,69 @@
+replicaCount: 1
+
+image:
+  repository: docker.io/library/mysql
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: ""
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: true
+  # Annotations to add to the service account
+  annotations: {}
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+podAnnotations: {}
+podSecurityContext: {}
+securityContext: {}
+
+domain_name:
+
+istio:
+  enabled: false
+pvc:
+  enabled: false
+
+service:
+  type: ClusterIP
+  port: 3306
+
+resources: {}
+
+community_forum_service_db_pass:
+community_forum_service_db_name:
+community_forum_service_db_user:
+content_service_db_pass:
+content_service_db_name:
+content_service_db_user:
+feedback_service_db_pass:
+feedback_service_db_name:
+feedback_service_db_user:
+helpdesk_service_db_pass:
+helpdesk_service_db_name:
+helpdesk_service_db_user:
+helix_db_pass:
+helix_db_name:
+helix_db_user:
+helix_edge_db_pass:
+helix_edge_db_name:
+helix_edge_db_user:
+notifications_service_db_pass:
+notifications_service_db_name:
+notifications_service_db_user:
+translation_service_db_pass:
+translation_service_db_name:
+translation_service_db_user:
+users_service_db_pass:
+users_service_db_name:
+users_service_db_user:
+visitor_registration_service_db_pass:
+visitor_registration_service_db_name:
+visitor_registration_service_db_user:
+db_admin_pass:
+db_admin_user:
+db_root_pass:
