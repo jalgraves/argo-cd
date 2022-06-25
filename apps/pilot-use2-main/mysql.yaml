@@ -7,7 +7,7 @@ metadata:
 spec:
   destination:
     namespace: database
-    server: https://k8s.pilot.use2.hqo.pub:6443
+    server: https://10.8.21.35:6443
   source:
     path: apps/helm/mysql
     repoURL: git@github.com:HqOapp/argo-cd.git
